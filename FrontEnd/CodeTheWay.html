@@ -4,11 +4,9 @@
     <meta charset="utf-8" />
     <title>Code The Way</title>
     <link rel="stylesheet" href="StyleSheet1.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
 </head>
-<body>
+<body onload="showHide()">
     <img src="Images/CodeTheWay Logo.png" height="5%" width="10%"/>
     <h1 class="majorHeading">Code The Way</h1>
     <h3 class="minorHeading">Mission:</h3>
@@ -21,20 +19,40 @@
     <p>Code the Way model includes:</p>
     <ul>
         <li>
-            Student access to real-world job experience – In addition to an advanced course that may earn post-secondary credits, students get experience working collaboratively on a project that benefits a nonprofit, culminating in a presentation to business leaders.
+            <div class="tooltip">
+                Student access to real-world job experience
+                <div class="tooltiptext">
+                    In addition to an advanced course that may earn post-secondary credits, students get experience working collaboratively on a project that benefits a nonprofit, culminating in a presentation to business leaders.
+                </div>
+            </div>
         </li>
         <li>
-            Companies are part of the solution – Companies invest in education, make technology more accessible to nonprofits, offer their employees a meaningful volunteer experience, and contribute to the talent pipeline.
+            <div class="tooltip">
+                Companies are part of the solution
+                <div class="tooltiptext">
+                    Companies invest in education, make technology more accessible to nonprofits, offer their employees a meaningful volunteer experience, and contribute to the talent pipeline.
+                </div>
+            </div>
         </li>
         <li>
-            Increasing certified computer science teachers – Support and training for computer science teacher certification increases the availability and quality of high school computer science programs.
+            <div class="tooltip">
+                Increasing certified computer science teachers
+                <div class="tooltiptext">
+                    Support and training for computer science teacher certification increases the availability and quality of high school computer science programs.
+                </div>
+            </div>
         </li>
     </ul>
     <img src="Images/Team Learning.jpg" align="right" width="400" height="250"/>
-    <h3  class="minorHeading">Vision:</h3>
-    <p>
-        High school students in Greater Milwaukee have access to high quality computer science education and real-world job experiences, positioning them for success in technology-related fields
-    </p>
+    <button onclick="showHide()" class="navigationLink">Show/Hide Vision</button>
+    <div id="vision">
+        <h3 class="minorHeading">Vision:</h3>
+        <div class="bodyText">
+            <p>
+                High school students in Greater Milwaukee have access to high quality computer science education and real-world job experiences, positioning them for success in technology-related fields
+            </p>
+        </div>
+    </div>
     <h3 class="minorHeading">Links:</h3>
     <ul>
         <li><a class="navigationLink" href="LifeNavigators.html">Life Navigators</a></li>
@@ -43,3 +61,15 @@
     </ul>
 </body>
 </html>
+<script>
+    function showHide() {
+        var x = document.getElementById("vision");
+
+        if (x.style.display !== "none") {
+            x.style.display = "none";
+        }
+        else {
+            x.style.display = "block";
+        }
+    }
+</script>
